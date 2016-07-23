@@ -2,6 +2,7 @@
 This is where I store all my custom settings that I used throughout my text editors, IDE's, adobe software, etc...
 
 ### Compatibility
+>>>>>>> 7002a7e3b04443bc1f92f9ad8a8513ae202b5b78
 I use Linux, and Windows as my primary OS's so some settings may work for one that may not work for others. For example, Xresources are specifically made to work with the i3wm (i3 window manager) - another example is the vimrc, _vimrc = windows /.vimrc = Linux this file may switch back and forth from these formats so it is important to know which one you need.
 
 ### Why
