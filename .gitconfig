@@ -1,0 +1,18 @@
+[core]
+	safecrlf = true
+	editor = atom
+[user]
+	email = mezerotm@gmail.com
+[gui]
+	recentrepo = C:/Users/Carlos/Desktop/git_immersion/work/hello
+[alias]
+sm-log = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%ad%C(reset)%C(bold yellow)%d%C(reset)%n%C(white)%s%C(reset)%n' --date=format-local:%x --all
+md-log = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%ad%C(reset)%C(bold yellow)%d%C(reset)%n%C(dim blue)[%an]%C(reset)%n%C(white)%s%C(reset)%n' --date=format-local:%c --all
+lg-log = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%ad%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n%C(dim blue)[%an - %ae]%C(reset)%n%C(white)%s%C(reset)%n%C(bold black)%b%C(reset)%n' --date=format-local:%c --all
+
+[color]
+	ui = true
+	status = auto
+	branch = auto
+[merge]
+	tool = atom
