@@ -1,4 +1,4 @@
-#Universal Settings
+# Universal Settings
 This is where I store all my custom settings that I used throughout my text editors, IDE's, adobe software, etc...
 
 ### Compatibility
