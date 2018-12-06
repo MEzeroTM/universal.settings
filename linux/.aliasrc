@@ -1,60 +1,39 @@
-downloads="/home/mezerotm/Downloads"
-
-# crouton
-alias tab="xiwi -T"
-alias atom="tab atom -f $downloads"
-
-# shell
-alias ip="ip -c -br"
-
-alias ..="cd .."
-alias ...="cd ../.."
-
-alias apt="sudo apt"
-alias apt-get="sudo apt-get"
-
-alias findall="sudo find / -iname"
-
-alias vizsh="vi ~/.zshrc"
+alias vialias="nvim ~/.aliasrc"
+alias vizsh="nvim ~/.zshrc"
+alias vibash="nvim ~/.bashrc"
 alias refresh="source ~/.zshrc"
-alias vibash="vi ~/.bashrc"
-alias vialias="vi ~/.aliasrc"
-alias virc="vi ~/.vimrc"
-
-alias ls="ls --color=auto -F"
-alias l="ls"
-alias ll="ls -lhs"
-alias la="ls -lhAs"
+alias virc="nvim ~/.config/nvm/init.vim"
+alias vigit="nvim ~/.gitconfig"
 
 alias ..="cd .."
-alias ...="cd ../../"
-alias ....="cd ../../../"
+
+alias ls="ls -Fh --color=auto"
+alias l="ls"
+alias l1="ls -1"
+alias ll="ls -l"
+alias la="ls -lA"
+alias la1="ls -1A"
+
+alias ip="ip -c -br"
 
 alias grep="grep --color=always"
 alias egrep="egrep --color=always"
 
 alias mkdir="mkdir -pv"
 
-alias svi="sudo vi"
+alias ports="netstat -tulpan"
+alias memory="watch -n .1 free -whlt"
+alias disk="sudo fdisk --list"
+alias cpu="lscpu"
 
-alias ports="netsat -tulpan"
-alias memory="watch -n .1 free -mt"
+alias tar="pv -p tar"
 
 alias df="df -haT --total"
-alias du="du -cha -d1"
+alias du="~/.local/bin/_du"
 alias ps0="ps -Ha -o \"uid user %cpu %mem pid fname command\""
 
 alias xargs="xargs -I{}"
 
-alias xtar="tar -xzvf"
-alias ctar="tar -cavf"
-alias dtar="tar -tf"
+alias vi="nvim"
 
-alias update="sudo apt update -y && sudo apt upgrade -y"
-
-# program
-alias idea="tab /opt/idea/bin/idea.sh"
-alias datagrip="tab /opt/datagrip/bin/datagrip.sh"
-alias clion="tab /opt/clion/bin/clion.sh"
-alias webstorm="tab /opt/webstorm/bin/webstorm.sh"
-
+#alias cat="pygmentize -O style=ocean -f console256 -g"
