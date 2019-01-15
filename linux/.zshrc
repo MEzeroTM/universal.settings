@@ -8,6 +8,7 @@ bindkey -v
 zstyle :compinstall filename '/home/mezerotm/.zshrc'
 
 autoload -Uz compinit
+fpath+=~/.config/zsh/zfunc
 compinit
 # End of lines added by compinstall
 
@@ -21,7 +22,7 @@ if [ -f ~/.antigen/antigen.zsh ]; then
 
 	antigen bundle desyncr/auto-ls
 	auto-ls-custom () {
-		ls -F --color=auto
+        ls -Fh --color=auto
 	}
 	AUTO_LS_COMMANDS=(custom)
 
@@ -34,5 +35,10 @@ if [ -f ~/.aliasrc ]; then
 	source ~/.aliasrc
 fi
 
-export LESS='-R'
-export LESSOPEN='|~/.config/less/lessfilter %s'
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+PATH=$HOME/.local/bin:$PATH

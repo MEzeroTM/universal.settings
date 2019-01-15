@@ -1,9 +1,28 @@
-alias vialias="nvim ~/.aliasrc"
-alias vizsh="nvim ~/.zshrc"
-alias vibash="nvim ~/.bashrc"
-alias refresh="source ~/.zshrc"
-alias virc="nvim ~/.config/nvm/init.vim"
-alias vigit="nvim ~/.gitconfig"
+if [ -z "$EDITOR" ]; then
+  if [ -x "$(command -v nvim)" ]; then
+   export EDITOR=nvim
+  else
+   export EDITOR=vim
+  fi
+fi
+
+if ! [ -z "$BASH" ]; then
+  SHELLRC="~/.bashrc"
+elif ! [ -z "$ZSH" ]; then
+  SHELLRC="~/.zshrc"
+fi
+
+
+alias vi="$EDITOR"
+alias vialias="$EDITOR ~/.aliasrc"
+alias vizsh="$EDITOR ~/.zshrc"
+alias vibash="$EDITOR ~/.bashrc"
+alias refresh="xrdb ~/.Xresources && source $SHELLRC && exec $SHELL"
+alias virc="$EDITOR ~/.config/nvim/init.vim"
+alias vigit="$EDITOR ~/.gitconfig"
+
+alias py="/usr/bin/python"
+alias py3="/usr/bin/python3"
 
 alias ..="cd .."
 
@@ -13,27 +32,31 @@ alias l1="ls -1"
 alias ll="ls -l"
 alias la="ls -lA"
 alias la1="ls -1A"
+alias .="cd -"
 
 alias ip="ip -c -br"
 
 alias grep="grep --color=always"
 alias egrep="egrep --color=always"
 
+alias md="mkdir -pv"
 alias mkdir="mkdir -pv"
+
+alias rd="rmdir -v"
+alias rm="rm -Ifdv"
 
 alias ports="netstat -tulpan"
 alias memory="watch -n .1 free -whlt"
 alias disk="sudo fdisk --list"
 alias cpu="lscpu"
-
-alias tar="pv -p tar"
+alias lsblk="lsblk -o NAME,LABEL,FSTYPE,SIZE,MOUNTPOINT"
 
 alias df="df -haT --total"
-alias du="~/.local/bin/_du"
+alias du="du -cha -d1"
 alias ps0="ps -Ha -o \"uid user %cpu %mem pid fname command\""
 
 alias xargs="xargs -I{}"
 
-alias vi="nvim"
+alias tar="tar -v"
 
-#alias cat="pygmentize -O style=ocean -f console256 -g"
+alias ccat="pygmentize -O style=base16-rebecca -f console256 -g"
